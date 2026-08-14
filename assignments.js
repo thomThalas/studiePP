@@ -86,7 +86,7 @@ function RenderCanvas(values)
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    ctx.strokeStyle = "black";
+    ctx.strokeStyle = "rgb(188, 212, 229)";
     ctx.lineWidth = 5
     ctx.beginPath();
     ctx.moveTo(0, canvas.height/2);
