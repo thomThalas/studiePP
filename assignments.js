@@ -109,10 +109,13 @@ function RenderCanvas(values)
         ctx.fillStyle = "white";
         ctx.font = "30px sans-serif"
         
+        //console.log(rect.w); // 244 -> 8 chars
+
+        // 244/30.5 = 8
         textArr = []
         for (let i = 0; i < assignment.title.length; i++)
         {
-            if((i+1) % 8 == 1)
+            if((i+1) % Math.round(rect.w/20) == 1)
             {
                 textArr.push("");
             }
