@@ -1,0 +1,20 @@
+{
+  "name": "Studie++",
+  "description": "AHHHHHHHHH",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "main.html",
+    "default_icon": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "js": ["assignments.js"],
+      "matches": [
+        "https://all.uddataplus.dk/opgave/*"
+      ]
+    }
+  ]
+  
+}
