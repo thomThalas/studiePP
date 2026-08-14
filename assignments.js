@@ -62,6 +62,11 @@ function Check()
 
 function Update()
 {
+    if(table == null)
+    {
+        table = document.querySelector("table");
+        MountCanvas();
+    }
     let values = GetTableValues(table);
     //console.log(values);
     RenderCanvas(values);
@@ -129,12 +134,17 @@ function RenderCanvas(values)
     
 }
 
+function MountCanvas()
+{
+    table.parentElement.appendChild(canvas);
+}
+
 function CreateCanvas()
 {
     canvas = document.createElement("canvas");
     //canvas.setAttribute("class", "table table-bordered table-condensed dataTable");
     canvas.setAttribute("style", "width: 100%; height: 200px;");
-    table.parentElement.appendChild(canvas);
+    MountCanvas();
     ctx = canvas.getContext("2d");
     canvas.addEventListener("click", event => {
         const rect = canvas.getBoundingClientRect();
